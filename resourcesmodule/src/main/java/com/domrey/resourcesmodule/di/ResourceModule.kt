@@ -10,7 +10,6 @@ import com.domrey.resourcesmodule.customview.ItemOffsetDecoration
 import com.domrey.resourcesmodule.dialog.countrycode.CountryCodeAdapter
 import com.domrey.resourcesmodule.helpers.permission.PermissionsFactory
 import com.domrey.resourcesmodule.util.Constants
-import com.google.android.gms.maps.MapView
 import com.google.android.material.datepicker.CalendarConstraints
 import com.google.android.material.datepicker.DateValidatorPointBackward
 import dagger.Module
@@ -23,15 +22,6 @@ import javax.inject.Singleton
 
 @Module
 class ResourceModule {
-
-   @Provides
-   fun provideMapView(context: Context): MapView {
-      val mapView = MapView(context)
-      mapView.onCreate(null)
-      mapView.onPause()
-      mapView.onDestroy()
-      return mapView
-   }
 
    @Provides
    fun provideHandler() = Handler()
