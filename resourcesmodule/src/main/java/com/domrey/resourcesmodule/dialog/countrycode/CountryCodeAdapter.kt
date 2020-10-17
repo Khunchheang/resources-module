@@ -25,7 +25,7 @@ class CountryCodeAdapter(private val context: Context, appExecutors: AppExecutor
       return R.layout.item_country_code
    }
 
-   override fun setViewHolder(parent: ViewGroup): ViewHolder {
+   override fun setViewHolder(viewType: Int, parent: ViewGroup): ViewHolder {
       return ViewHolder(binding)
    }
 
