@@ -1,14 +1,12 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
-apply plugin: "androidx.navigation.safeargs.kotlin"
 
 android {
     compileSdkVersion build_versions.target_sdk
     buildToolsVersion build_versions.build_tools
     defaultConfig {
-        applicationId "com.domrey.resourcesmodule"
         minSdkVersion build_versions.min_sdk
         targetSdkVersion build_versions.target_sdk
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -22,7 +20,6 @@ android {
         release {
             debuggable false
             minifyEnabled true
-            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -41,6 +38,7 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    // work-runtime-ktx 2.1.0 and above now requires Java 8
     kotlinOptions {
         jvmTarget = "1.8"
     }
