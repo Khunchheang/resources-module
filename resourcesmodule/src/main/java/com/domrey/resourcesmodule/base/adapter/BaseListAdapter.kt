@@ -31,14 +31,14 @@ abstract class BaseListAdapter<B : ViewDataBinding, T, VH : RecyclerView.ViewHol
    @LayoutRes
    abstract fun getLayout(viewType: Int): Int
 
-   abstract fun setViewHolder(parent: ViewGroup): VH
+   abstract fun setViewHolder(viewType: Int, parent: ViewGroup): VH
 
    abstract fun onBindData(holder: VH, data: T, position: Int)
 
    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
       val inflater = LayoutInflater.from(parent.context)
       binding = DataBindingUtil.inflate(inflater, getLayout(viewType), parent, false)
-      return setViewHolder(parent)
+      return setViewHolder(viewType, parent)
    }
 
    override fun onBindViewHolder(holder: VH, position: Int) {
