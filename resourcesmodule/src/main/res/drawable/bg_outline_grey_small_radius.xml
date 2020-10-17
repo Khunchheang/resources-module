@@ -5,5 +5,5 @@
    <stroke
       android:width="@dimen/line_height"
       android:color="@color/colorDivider" />
-   <corners android:radius="@dimen/bg_small_radius" />
+   <corners android:radius="@dimen/bg_radius" />
 </shape>

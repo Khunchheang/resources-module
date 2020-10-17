@@ -82,7 +82,7 @@
    <dimen name="tab_indicator_height">2dp</dimen>
 
    <!--Button-->
-   <dimen name="bg_small_radius">8dp</dimen>
+   <dimen name="bg_radius">8dp</dimen>
    <dimen name="simple_button_height">45dp</dimen>
 
    <!--Elevation-->

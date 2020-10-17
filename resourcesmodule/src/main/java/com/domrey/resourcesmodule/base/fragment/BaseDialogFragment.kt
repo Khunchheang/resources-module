@@ -35,7 +35,7 @@ open class BaseDialogFragment<T : ViewDataBinding>(@LayoutRes val contentLayoutI
       val dialog = super.onCreateDialog(savedInstanceState)
       dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
       dialog.window!!.setBackgroundDrawableResource(android.R.color.transparent)
-      dialog.window!!.attributes.windowAnimations = R.style.DialogScaleAnimation
+      dialog.window!!.attributes.windowAnimations = R.style.DialogAnimation
       return dialog
    }
 

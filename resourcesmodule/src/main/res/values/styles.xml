@@ -6,7 +6,6 @@
       <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
       <item name="colorAccent">@color/colorAccent</item>
       <item name="materialCalendarTheme">@style/materialDialog</item>
-      <item name="fontFamily">@font/arial</item>
    </style>
 
    <style name="AppTheme.Light" parent="Theme.MaterialComponents.Light">
@@ -16,7 +15,6 @@
       <item name="android:windowBackground">@color/colorPrimaryWhite</item>
       <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
       <item name="materialCalendarTheme">@style/materialDialog</item>
-      <item name="fontFamily">@font/arial</item>
    </style>
 
    <!--No action bar-->
@@ -74,13 +72,6 @@
       <item name="colorAccent">@color/colorAccent</item>
       <item name="android:windowNoTitle">true</item>
       <item name="windowNoTitle">true</item>
-   </style>
-
-   <!--Dialog Style-->
-   <style name="AppTheme.Loading" parent="AppTheme.DialogStyle">
-      <item name="android:windowMinWidthMajor">40%</item>
-      <item name="android:windowMinWidthMinor">40%</item>
-      <item name="colorAccent">@color/colorAccent</item>
    </style>
 
    <!--Dialog Animation-->

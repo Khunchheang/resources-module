@@ -3,6 +3,6 @@
    android:shape="rectangle">
    <solid android:color="@color/mdRed700" />
    <corners
-      android:topLeftRadius="@dimen/bg_small_radius"
-      android:topRightRadius="@dimen/bg_small_radius" />
+      android:topLeftRadius="@dimen/bg_radius"
+      android:topRightRadius="@dimen/bg_radius" />
 </shape>
