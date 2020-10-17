@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--~
-  ~ Copyright (c) SkyBooking Co,. Ltd
-  ~ SkyOwner
-  ~ Created by Khunchheang on  18/1/2020.
-  -->
-
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
    package="com.domrey.resourcesmodule">
 
@@ -16,15 +10,18 @@
       android:supportsRtl="true"
       android:theme="@style/AppTheme">
 
-      <!--Auto complete OTP coe-->
-      <receiver
-         android:name="com.domrey.resourcesmodule.helpers.SMSBroadcastReceiver"
-         android:exported="true"
-         android:permission="SMSReceiver">
+      <activity
+          android:name=".ResourceActivity"
+          android:label="@string/app_name"
+          android:launchMode="singleTask"
+          android:theme="@style/AppTheme"
+          android:windowSoftInputMode="adjustPan">
          <intent-filter>
-            <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVE" />
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
          </intent-filter>
-      </receiver>
+      </activity>
 
    </application>
 
