@@ -35,7 +35,7 @@ abstract class BasePagedListAdapter<B : ViewDataBinding, T, VH : RecyclerView.Vi
    @LayoutRes
    abstract fun getLayout(viewType: Int): Int
 
-   abstract fun setViewHolder(parent: ViewGroup): VH
+   abstract fun setViewHolder(viewType: Int, parent: ViewGroup): VH
 
    abstract fun onBindData(holder: VH, data: T?, position: Int)
 
@@ -49,7 +49,7 @@ abstract class BasePagedListAdapter<B : ViewDataBinding, T, VH : RecyclerView.Vi
          viewType >= VIEW_ITEM -> {
             val inflater = LayoutInflater.from(parent.context)
             binding = DataBindingUtil.inflate(inflater, getLayout(viewType), parent, false)
-            setViewHolder(parent)
+            setViewHolder(viewType, parent)
          }
          else -> throw IllegalArgumentException("unknown view type $viewType")
       }
