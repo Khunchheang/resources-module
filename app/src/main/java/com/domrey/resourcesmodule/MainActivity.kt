@@ -1,4 +1,4 @@
-package com.domrey.resourcesmoduleapp
+package com.domrey.resourcesmodule
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
