@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+   <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:clipToPadding="false"
+      android:orientation="vertical">
+
+      <TextView
+         style="@style/generalTextStyle.WithPadding.BSDialogTitleStyle"
+         android:text="@string/choose_an_action" />
+
+      <View style="@style/dividerWithMarginStyle" />
+
+      <TextView
+         android:id="@+id/tvCamera"
+         style="@style/generalTextStyle.WithPadding.Clickable"
+         android:layout_width="match_parent"
+         android:drawableStart="@drawable/ic_camera"
+         android:text="@string/camera"
+         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+      <View style="@style/dividerWithMarginStyle" />
+
+      <TextView
+         android:id="@+id/tvGallery"
+         style="@style/generalTextStyle.WithPadding.Clickable"
+         android:layout_width="match_parent"
+         android:drawableStart="@drawable/ic_gallery"
+         android:text="@string/gallery"
+         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+      <View style="@style/dividerNoMarginStyle" />
+
+      <TextView
+         android:id="@+id/tvCancel"
+         style="@style/generalTextStyle.WithPadding.Clickable"
+         android:layout_width="match_parent"
+         android:gravity="center"
+         android:text="@string/cancel" />
+
+   </LinearLayout>
+
+</layout>

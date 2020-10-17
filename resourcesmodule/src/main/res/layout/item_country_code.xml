@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+   <data>
+
+      <variable
+         name="displayCountry"
+         type="String" />
+
+      <variable
+         name="dialCode"
+         type="String" />
+
+   </data>
+
+   <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <TextView
+         android:id="@+id/tvCountry"
+         style="@style/generalTextStyle.WithPadding.Clickable"
+         android:layout_width="match_parent"
+         android:text="@{displayCountry + dialCode, default = `Cambodia (+855)`}"
+         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />
+
+      <View
+         style="@style/dividerWithMarginStyle"
+         android:layout_width="match_parent"
+         app:layout_constraintTop_toBottomOf="@+id/tvCountry" />
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

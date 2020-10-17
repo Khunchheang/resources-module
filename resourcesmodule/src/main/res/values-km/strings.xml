@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+   <!--Dialog-->
+   <string name="ok">យល់ព្រម</string>
+   <string name="cancel">បោះបង់</string>
+   <string name="retry">ព្យាយាមម្តងទៀត</string>
+   <string name="tab_to_retry">ចុចដើម្បីព្យាយាមម្តងទៀត</string>
+   <string name="yes">បាទ/ចាស</string>
+   <string name="no">ទេ</string>
+
+   <!--Server message-->
+   <!--Session expired-->
+   <string name="session_expired">សម័យកាល​បាន​ផុតកំណត់</string>
+   <string name="pls_log_in_again">សូមចូលម្តងទៀត។</string>
+   <!--Server problem-->
+   <string name="cannot_connect">មិនអាចភ្ជាប់បាន</string>
+   <string name="pls_try_again">សូម​ព្យាយាម​ម្តង​ទៀត។</string>
+   <!--Timeout-->
+   <string name="connection_timeout">អស់ពេលតភ្ជាប់</string>
+   <!--No network connection-->
+   <string name="no_network_title">គ្មានការភ្ជាប់បណ្តាញ</string>
+   <string name="pls_check_network">សូមពិនិត្យការភ្ជាប់បណ្តាញរបស់អ្នក។</string>
+
+   <!--Loading dialog-->
+   <string name="loading">កំពុងផ្ទុក…</string>
+
+   <!--No data message-->
+   <string name="no_data">រកមិនឃើញទិន្នន័យ</string>
+
+   <!--Language dialog-->
+   <string name="languages">ភាសា</string>
+
+   <!--General-->
+   <string name="save">រក្សាទុក</string>
+
+   <!--Country code dialog-->
+   <string name="search_country">ស្វែងរកប្រទេស​ឬ​តំបន់</string>
+   <string name="country_or_region">ប្រទេស​ឬ​តំបន់</string>
+   <string name="country_not_found">រកមិនឃើញប្រទេស​ឬ​តំបន់</string>
+
+   <!--Verify Code-->
+   <string name="verify_code">ផ្ទៀងផ្ទាត់លេខកូដ</string>
+   <string name="enter_six_digit_tag">បញ្ចូលលេខកូដ ៦ ខ្ទង់ដែលបានផ្ញើទៅ : %s</string>
+   <string name="submit">ដាក់ស្នើ</string>
+   <string name="resend">ផ្ញើឡើងវិញ</string>
+   <string name="dont_get_code">មិនទទួលបានលេខកូដ?</string>
+   <string name="invalid_code">លេខកូដមិនត្រឹមត្រូវ</string>
+   <string name="verify_fail">លេខកូដផ្ទៀងផ្ទាត់មិនត្រឹមត្រូវ!</string>
+   <string name="you_can_resend_in_tag">អ្នកអាចផ្ញើសារឡើងវិញនៅ %s</string>
+   <string name="verify_code_send_success">ផ្ទៀងផ្ទាត់លេខកូដដែលបានផ្ញើដោយជោគជ័យ</string>
+
+   <!--Dialog image picker-->
+   <string name="choose_an_action">ជ្រើសរើសសកម្មភាព</string>
+   <string name="camera">កាមេរ៉ា</string>
+   <string name="gallery">ពីឧបករណ៍</string>
+   <string name="permissions_denied">សិទ្ធិត្រូវបានបដិសេធ</string>
+
+   <!--Location picker dialog-->
+   <string name="close">បិទ</string>
+   <string name="done">ធ្វើរួច</string>
+   <string name="no_location_data_provided">មិនមានទិន្នន័យទីតាំងបានផ្តល់!</string>
+
+   <!--Update version dialog-->
+   <string name="new_update_title">ការធ្វើបច្ចុប្បន្នភាពថ្មី</string>
+   <string name="new_update_available_msg">មានកំណែថ្មីសម្រាប់ការធ្វើបច្ចុប្បន្នភាព។ សូមចូលទៅធ្វើបច្ចុប្បន្នភាព។</string>
+
+   <!--Gender dialog-->
+   <string name="gender">ភេទ</string>
+   <string name="male">ប្រុស</string>
+   <string name="female">ស្រី</string>
+   <string name="unknown">មិនស្គាល់</string>
+
+</resources>

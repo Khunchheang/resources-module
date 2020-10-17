@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+   <!--Dialog-->
+   <string name="ok">Baik</string>
+   <string name="cancel">Membatalkan</string>
+   <string name="retry">Mencoba kembali</string>
+   <string name="tab_to_retry">Tab untuk mencoba lagi</string>
+   <string name="yes">Iya</string>
+   <string name="no">Tidak</string>
+
+   <!--Server message-->
+   <!--Session expired-->
+   <string name="session_expired">Sesi berakhir</string>
+   <string name="pls_log_in_again">Silakan masuk lagi.</string>
+   <!--Server problem-->
+   <string name="cannot_connect">Tidak dapat terhubung</string>
+   <string name="pls_try_again">Silakan coba lagi.</string>
+   <!--Timeout-->
+   <string name="connection_timeout">Waktu koneksi habis</string>
+   <!--No network connection-->
+   <string name="no_network_title">Tidak ada koneksi jaringan</string>
+   <string name="pls_check_network">Silakan periksa koneksi jaringan Anda!</string>
+
+   <!--Loading dialog-->
+   <string name="loading">Memuat…</string>
+
+   <!--No data message-->
+   <string name="no_data">Tidak ada data ditemukan</string>
+
+   <!--Language dialog-->
+   <string name="languages">Bahasa</string>
+
+   <!--General-->
+   <string name="save">Menyimpan</string>
+
+   <!--Country code dialog-->
+   <string name="search_country">Cari negara atau wilayah</string>
+   <string name="country_or_region">Negara atau wilayah</string>
+   <string name="country_not_found">Negara atau wilayah tidak ditemukan</string>
+
+   <!--Verify Code-->
+   <string name="verify_code">Kode verifikasi</string>
+   <string name="enter_six_digit_tag">Masukkan kode 6 digit yang dikirim ke: %s</string>
+   <string name="submit">Kirimkan</string>
+   <string name="resend">Kirim ulang</string>
+   <string name="dont_get_code">Jangan dapatkan kodenya?</string>
+   <string name="invalid_code">Kode salah</string>
+   <string name="verify_fail">Kode verifikasi salah!</string>
+   <string name="you_can_resend_in_tag">Anda dapat mengirim ulang dalam %s</string>
+   <string name="verify_code_send_success">Verifikasi kode berhasil dikirim!</string>
+
+   <!--Dialog image picker-->
+   <string name="choose_an_action">Pilih suatu Tindakan</string>
+   <string name="camera">Kamera</string>
+   <string name="gallery">Galeri</string>
+   <string name="permissions_denied">Izin ditolak</string>
+
+   <!--Location picker dialog-->
+   <string name="close">Menutup</string>
+   <string name="done">Selesai</string>
+   <string name="no_location_data_provided">Tidak ada data lokasi yang disediakan!</string>
+
+   <!--Update version dialog-->
+   <string name="new_update_title">Pembaruan Baru</string>
+   <string name="new_update_available_msg">Versi baru untuk pembaruan tersedia. Silakan buka pembaruan.</string>
+
+   <!--Gender dialog-->
+   <string name="gender">Jenis kelamin</string>
+   <string name="male">Pria</string>
+   <string name="female">Perempuan</string>
+   <string name="unknown">Tidak dikenal</string>
+
+</resources>

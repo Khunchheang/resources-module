@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <!--margins-->
+   <dimen name="margin_1x">4dp</dimen>
+   <dimen name="margin_2x">8dp</dimen>
+   <dimen name="margin_3x">12dp</dimen>
+   <dimen name="margin_4x">16dp</dimen>
+   <dimen name="margin_5x">20dp</dimen>
+   <dimen name="margin_6x">24dp</dimen>
+   <dimen name="margin_7x">28dp</dimen>
+   <dimen name="margin_8x">32dp</dimen>
+   <dimen name="margin_9x">36dp</dimen>
+   <dimen name="margin_10x">40dp</dimen>
+   <dimen name="margin_11x">44dp</dimen>
+   <dimen name="margin_12x">48dp</dimen>
+   <dimen name="margin_13x">52dp</dimen>
+   <dimen name="margin_14x">56dp</dimen>
+   <dimen name="margin_15x">60dp</dimen>
+   <dimen name="margin_16x">64dp</dimen>
+   <dimen name="margin_17x">68dp</dimen>
+   <dimen name="margin_18x">72dp</dimen>
+   <dimen name="margin_19x">76dp</dimen>
+   <dimen name="margin_20x">80dp</dimen>
+
+   <!--padding-->
+   <dimen name="padding2dp">2dp</dimen>
+   <dimen name="padding3dp">3dp</dimen>
+   <dimen name="padding_1x">4dp</dimen>
+   <dimen name="padding_2x">8dp</dimen>
+   <dimen name="padding_3x">12dp</dimen>
+   <dimen name="padding_4x">16dp</dimen>
+   <dimen name="padding_5x">20dp</dimen>
+   <dimen name="padding_6x">24dp</dimen>
+   <dimen name="padding_7x">28dp</dimen>
+   <dimen name="padding_8x">32dp</dimen>
+   <dimen name="padding_9x">36dp</dimen>
+   <dimen name="padding_10x">40dp</dimen>
+   <dimen name="padding_11x">44dp</dimen>
+   <dimen name="padding_12x">48dp</dimen>
+   <dimen name="padding_13x">52dp</dimen>
+   <dimen name="padding_14x">56dp</dimen>
+   <dimen name="padding_15x">60dp</dimen>
+   <dimen name="padding_16x">64dp</dimen>
+   <dimen name="padding_17x">68dp</dimen>
+   <dimen name="padding_18x">72dp</dimen>
+   <dimen name="padding_19x">76dp</dimen>
+   <dimen name="padding_20x">80dp</dimen>
+
+   <!--text size-->
+   <dimen name="text_x_small">10sp</dimen>
+   <dimen name="text_small">12sp</dimen>
+   <dimen name="text_normal">14sp</dimen>
+   <dimen name="text_x_normal">16sp</dimen>
+   <dimen name="text_medium">18sp</dimen>
+   <dimen name="text_x_medium">20sp</dimen>
+   <dimen name="text_large">22sp</dimen>
+   <dimen name="text_xlarge">24sp</dimen>
+
+   <!--Divider-->
+   <dimen name="line_height">0.3dp</dimen>
+
+   <!--Recyclerview-->
+   <dimen name="default_spacing_very_small">2dp</dimen>
+   <dimen name="default_spacing_small">4dp</dimen>
+   <dimen name="default_spacing_small_6dp">6dp</dimen>
+   <dimen name="default_spacing_medium">8dp</dimen>
+   <dimen name="default_spacing_x_medium">16dp</dimen>
+   <dimen name="default_spacing_huge">128dp</dimen>
+   <dimen name="header_offset">40dp</dimen>
+
+   <dimen name="min_height_match_parent">1000dp</dimen>
+
+   <!--Range seek bar-->
+   <dimen name="bubble_thumb_height">70dp</dimen>
+   <dimen name="bubble_thumb_width">70dp</dimen>
+   <dimen name="thumb_height">28dp</dimen>
+   <dimen name="thumb_width">28dp</dimen>
+
+   <!--Tab layout-->
+   <dimen name="tab_height">44dp</dimen>
+   <dimen name="tab_height_large">72dp</dimen>
+   <dimen name="tab_indicator_height">2dp</dimen>
+
+   <!--Button-->
+   <dimen name="bg_small_radius">8dp</dimen>
+   <dimen name="simple_button_height">45dp</dimen>
+
+   <!--Elevation-->
+   <dimen name="toolbar_elevation">5dp</dimen>
+   <dimen name="bg_small_elevation">2dp</dimen>
+   <dimen name="card_small_elevation">1dp</dimen>
+   <dimen name="tab_elevation">3dp</dimen>
+
+   <!--Indicator-->
+   <dimen name="small_indicator_dimen">10dp</dimen>
+   <dimen name="small_indicator_space">3dp</dimen>
+   <dimen name="small_indicator_radius">8dp</dimen>
+
+   <!--Tablayout-->
+   <dimen name="toolbar_expand_height">272dp</dimen>
+
+   <!--Google map-->
+   <dimen name="map_padding_bottom">72dp</dimen>
+
+</resources>

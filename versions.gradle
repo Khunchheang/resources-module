@@ -1,0 +1,194 @@
+ext.deps = [:]
+def versions = [:]
+versions.kotlin = "1.3.72"
+versions.support = "1.1.0"
+versions.constraint_layout = "1.1.3"
+versions.core_ktx = "1.3.0"
+versions.fragment = "1.2.5"
+versions.android_gradle_plugin = '4.0.0'
+versions.dagger = "2.28"
+versions.glide = "4.11.0"
+versions.retrofit = "2.9.0"
+versions.okhttp = "4.7.2"
+versions.dbdebug = "1.0.6"
+versions.onesignal_classpath = "[0.12.6, 0.99.99]"
+versions.onesignal = "[3.13.0, 3.99.99]"
+versions.rxjava = "3.0.0"
+versions.work = "2.3.4"
+versions.lifecycle = "2.2.0"
+versions.navigation = "2.2.2"
+versions.paging = "2.1.2"
+versions.room = "2.2.5"
+versions.coroutines = "1.3.7"
+versions.facebook = "[5,6)"
+versions.map_util = "1.3.3"
+versions.google_place = "2.3.0"
+versions.google_service_class_path = "4.3.3"
+versions.google_service = "17.0.0"
+versions.firebase_analytic = "17.2.2"
+versions.auth_phone = "17.3.0"
+versions.firebase_remote_config = "19.0.4"
+versions.crashlytic_class_path = "2.1.1"
+versions.leakcanary = "1.6.3"
+versions.gson = "2.8.6"
+versions.compressor = "3.0.0"
+//Test
+versions.arch_core = "2.0.1"
+versions.atsl_core = "1.2.0"
+versions.atsl_junit = "1.1.1"
+versions.atsl_rules = "1.2.0"
+versions.atsl_runner = "1.2.0"
+versions.espresso = "3.2.0"
+versions.mockito = "2.25.0"
+versions.mockito_all = "1.10.19"
+versions.mockito_android = "2.25.0"
+versions.mockwebserver = "3.8.1"
+ext.versions = versions
+
+def kotlin = [:]
+kotlin.stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin"
+kotlin.test = "org.jetbrains.kotlin:kotlin-test-junit:$versions.kotlin"
+kotlin.plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
+kotlin.allopen = "org.jetbrains.kotlin:kotlin-allopen:$versions.kotlin"
+deps.kotlin = kotlin
+
+def support = [:]
+support.annotations = "androidx.annotation:annotation:$versions.support"
+support.app_compat = "androidx.appcompat:appcompat:$versions.support"
+support.recyclerview = "androidx.recyclerview:recyclerview:$versions.support"
+support.design = "com.google.android.material:material:1.3.0-alpha01"
+support.v4 = "androidx.legacy:legacy-support-v4:1.0.0"
+support.core_utils = "androidx.legacy:legacy-support-core-utils:$versions.support"
+support.core_ktx = "androidx.core:core-ktx:$versions.core_ktx"
+support.viewpager2 = "androidx.viewpager2:viewpager2:1.0.0"
+support.fragment_ktx = "androidx.fragment:fragment-ktx:$versions.fragment"
+support.activity_ktx = "androidx.activity:activity-ktx:$versions.support"
+deps.support = support
+
+def retrofit = [:]
+retrofit.runtime = "com.squareup.retrofit2:retrofit:$versions.retrofit"
+retrofit.converter_gson = "com.squareup.retrofit2:converter-gson:$versions.retrofit"
+deps.retrofit = retrofit
+
+def okhttp = [:]
+okhttp.okhttp3_interceptor = "com.squareup.okhttp3:logging-interceptor:$versions.okhttp"
+okhttp.okhttp3 = "com.squareup.okhttp3:okhttp:$versions.okhttp"
+deps.okhttp = okhttp
+
+def dagger = [:]
+dagger.runtime = "com.google.dagger:dagger:$versions.dagger"
+dagger.android = "com.google.dagger:dagger-android:$versions.dagger"
+dagger.android_support = "com.google.dagger:dagger-android-support:$versions.dagger"
+dagger.compiler = "com.google.dagger:dagger-compiler:$versions.dagger"
+dagger.android_support_compiler = "com.google.dagger:dagger-android-processor:$versions.dagger"
+deps.dagger = dagger
+
+def room = [:]
+room.runtime = "androidx.room:room-runtime:$versions.room"
+room.compiler = "androidx.room:room-compiler:$versions.room"
+room.rxjava2 = "androidx.room:room-rxjava2:$versions.room"
+room.testing = "androidx.room:room-testing:$versions.room"
+room.room_ktx = "androidx.room:room-ktx:$versions.room"
+deps.room = room
+
+def lifecycle = [:]
+lifecycle.extension = "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle"
+lifecycle.runtime = "androidx.lifecycle:lifecycle-runtime-ktx:$versions.lifecycle"
+lifecycle.java8 = "androidx.lifecycle:lifecycle-common-java8:$versions.lifecycle"
+lifecycle.compiler = "androidx.lifecycle:lifecycle-compiler:$versions.lifecycle"
+lifecycle.viewmodel_ktx = "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycle"
+lifecycle.livedata_ktx = "androidx.lifecycle:lifecycle-livedata-ktx:$versions.lifecycle"
+deps.lifecycle = lifecycle
+
+deps.paging_ktx = "androidx.paging:paging-runtime-ktx:$versions.paging"
+
+def work = [:]
+work.runtime = "androidx.work:work-runtime:$versions.work"
+work.testing = "androidx.work:work-testing:$versions.work"
+work.firebase = "androidx.work:work-firebase:$versions.work"
+work.runtime_ktx = "androidx.work:work-runtime-ktx:$versions.work"
+deps.work = work
+
+def navigation = [:]
+navigation.runtime = "androidx.navigation:navigation-runtime:$versions.navigation"
+navigation.runtime_ktx = "androidx.navigation:navigation-runtime-ktx:$versions.navigation"
+navigation.fragment = "androidx.navigation:navigation-fragment:$versions.navigation"
+navigation.fragment_ktx = "androidx.navigation:navigation-fragment-ktx:$versions.navigation"
+navigation.ui = "androidx.navigation:navigation-ui:$versions.navigation"
+navigation.ui_ktx = "androidx.navigation:navigation-ui-ktx:$versions.navigation"
+navigation.safe_args_plugin = "androidx.navigation:navigation-safe-args-gradle-plugin:$versions.navigation"
+deps.navigation = navigation
+
+def coroutine = [:]
+coroutine.core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$versions.coroutines"
+coroutine.android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutines"
+coroutine.test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:$versions.coroutines"
+deps.coroutine = coroutine
+
+def firebase = [:]
+firebase.analytic = "com.google.firebase:firebase-analytics:$versions.firebase_analytic"
+firebase.crashlytic = "com.google.firebase:firebase-crashlytics:17.0.0-beta03"
+firebase.remote_config = "com.google.firebase:firebase-config:$versions.firebase_remote_config"
+firebase.crashlytic_class_path = "com.google.firebase:firebase-crashlytics-gradle:$versions.crashlytic_class_path"
+deps.firebase = firebase
+
+def service = [:]
+service.map = "com.google.android.gms:play-services-maps:$versions.google_service"
+service.map_utils = "com.google.maps.android:android-maps-utils:$versions.map_util"
+service.place = "com.google.android.libraries.places:places:$versions.google_place"
+service.location = "com.google.android.gms:play-services-location:$versions.google_service"
+service.auth = "com.google.android.gms:play-services-auth:$versions.google_service"
+service.auth_api_phone = "com.google.android.gms:play-services-auth-api-phone:$versions.auth_phone"
+service.google_service_class_path = "com.google.gms:google-services:$versions.google_service_class_path"
+deps.service = service
+
+def leakcanary = [:]
+leakcanary.leak = "com.squareup.leakcanary:leakcanary-android:$versions.leakcanary"
+leakcanary.no_op = "com.squareup.leakcanary:leakcanary-android-no-op:$versions.leakcanary"
+leakcanary.support_fragment = "com.squareup.leakcanary:leakcanary-support-fragment:$versions.leakcanary"
+deps.leakcanary = leakcanary
+
+def espresso = [:]
+espresso.core = "androidx.test.espresso:espresso-core:$versions.espresso"
+espresso.contrib = "androidx.test.espresso:espresso-contrib:$versions.espresso"
+espresso.intents = "androidx.test.espresso:espresso-intents:$versions.espresso"
+deps.espresso = espresso
+
+def atsl = [:]
+atsl.core = "androidx.test:core:$versions.atsl_core"
+atsl.ext_junit = "androidx.test.ext:junit:$versions.atsl_junit"
+atsl.runner = "androidx.test:runner:$versions.atsl_runner"
+atsl.rules = "androidx.test:rules:$versions.atsl_rules"
+deps.atsl = atsl
+
+def mockito = [:]
+mockito.core = "org.mockito:mockito-core:$versions.mockito"
+mockito.all = "org.mockito:mockito-all:$versions.mockito_all"
+mockito.android = "org.mockito:mockito-android:$versions.mockito_android"
+deps.mockito = mockito
+
+deps.glide = "com.github.bumptech.glide:glide:$versions.glide"
+deps.rxjava = "io.reactivex.rxjava3:rxjava:$versions.rxjava"
+deps.rx_android = "io.reactivex.rxjava3:rxandroid:$versions.rxjava"
+deps.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_gradle_plugin"
+deps.constraint_layout = "androidx.constraintlayout:constraintlayout:$versions.constraint_layout"
+deps.onesignal = "com.onesignal:OneSignal:$versions.onesignal"
+deps.onesingal_classpath = "gradle.plugin.com.onesignal:onesignal-gradle-plugin:$versions.onesignal_classpath"
+deps.gson = "com.google.code.gson:gson:$versions.gson"
+deps.facebook = "com.facebook.android:facebook-login:$versions.facebook"
+deps.db_debug = "com.amitshekhar.android:debug-db:$versions.dbdebug"
+deps.compressor = "id.zelory:compressor:$versions.compressor"
+ext.deps = deps
+
+def build_versions = [:]
+build_versions.min_sdk = 21
+build_versions.target_sdk = 29
+build_versions.build_tools = "29.0.2"
+ext.build_versions = build_versions
+
+static def addRepos(RepositoryHandler handler) {
+    handler.google()
+    handler.jcenter()
+}
+
+ext.addRepos = this.&addRepos

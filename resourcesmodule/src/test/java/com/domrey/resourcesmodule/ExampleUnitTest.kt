@@ -1,0 +1,23 @@
+/**
+ * Copyright (c) SkyBooking Co,. Ltd
+ * SkyOwner
+ * Created by Khunchheang on  18/1/2020.
+ */
+
+package com.domrey.resourcesmodule
+
+import org.junit.Test
+
+import org.junit.Assert.*
+
+/**
+ * Example local unit test, which will execute on the development machine (host).
+ *
+ * See [testing documentation](http://d.android.com/tools/testing).
+ */
+class ExampleUnitTest {
+   @Test
+   fun addition_isCorrect() {
+      assertEquals(4, 2 + 2)
+   }
+}

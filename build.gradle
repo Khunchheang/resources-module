@@ -1,0 +1,35 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    apply from: 'versions.gradle'
+    ext {
+        support_version = '1.0.0'
+        compressor_version = '2.1.0'
+        fabric_classpath_version='1.31.0'
+    }
+    addRepos(repositories)
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+    dependencies {
+        classpath deps.android_gradle_plugin
+        classpath deps.kotlin.plugin
+        classpath deps.navigation.safe_args_plugin
+        classpath deps.service.google_service_class_path
+        classpath deps.firebase.crashlytic_class_path
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    addRepos(repositories)
+    repositories {
+        maven { url 'https://maven.google.com/' }
+        maven { url "https://jitpack.io" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,251 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+   <!-- Base application theme. -->
+   <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+      <item name="colorPrimary">@color/colorPrimary</item>
+      <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+      <item name="colorAccent">@color/colorAccent</item>
+      <item name="materialCalendarTheme">@style/DatePickerTheme</item>
+   </style>
+
+   <style name="AppTheme.Light" parent="Theme.MaterialComponents.Light">
+      <item name="colorPrimary">@color/colorPrimaryWhite</item>
+      <item name="colorPrimaryDark">@color/colorPrimaryWhite</item>
+      <item name="colorAccent">@color/colorAccent</item>
+      <item name="android:windowBackground">@color/colorPrimaryWhite</item>
+      <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+      <item name="materialCalendarTheme">@style/DatePickerTheme</item>
+   </style>
+
+   <!--No action bar-->
+   <style name="AppTheme.NoActionBar" parent="AppTheme.Light">
+      <item name="windowActionBar">false</item>
+      <item name="windowNoTitle">true</item>
+      <item name="android:statusBarColor">@color/colorPrimary</item>
+   </style>
+
+   <style name="BottomSheetDialog" parent="@style/Theme.MaterialComponents.Light.BottomSheetDialog">
+      <item name="android:windowIsFloating">false</item>
+      <item name="android:statusBarColor">@android:color/transparent</item>
+      <item name="android:colorAccent">@color/colorPrimary</item>
+      <item name="colorAccent">@color/colorAccent</item>
+      <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+      <item name="colorPrimary">@color/colorPrimary</item>
+      <item name="windowActionBar">false</item>
+      <item name="windowNoTitle">true</item>
+   </style>
+
+   <style name="BottomSheetDialogRound" parent="BottomSheetDialog">
+      <item name="bottomSheetStyle">@style/BottomSheetRound</item>
+   </style>
+
+   <style name="BottomSheetRound" parent="@style/Widget.Design.BottomSheet.Modal">
+      <item name="android:background">@drawable/bg_bottom_sheet</item>
+   </style>
+
+   <!--Dialog Style-->
+   <style name="AppTheme.DialogStyle" parent="Base.Theme.MaterialComponents.Light.Dialog">
+      <item name="android:windowMinWidthMajor">87%</item>
+      <item name="android:windowMinWidthMinor">87%</item>
+      <item name="colorAccent">@color/colorAccent</item>
+   </style>
+
+   <!--Dialog Animation-->
+   <style name="DialogScaleAnimation">
+      <item name="android:windowEnterAnimation">@anim/scale_in</item>
+      <item name="android:windowExitAnimation">@anim/scale_out</item>
+   </style>
+
+   <style name="DialogFadeAnimation">
+      <item name="android:windowEnterAnimation">@anim/dialog_fade_in</item>
+      <item name="android:windowExitAnimation">@anim/dialog_fade_out</item>
+   </style>
+
+   <!--Divider-->
+   <style name="dividerNoMarginStyle">
+      <item name="android:layout_width">match_parent</item>
+      <item name="android:layout_height">@dimen/line_height</item>
+      <item name="android:background">@color/colorDivider</item>
+   </style>
+
+   <style name="dividerWithMarginStyle" parent="dividerNoMarginStyle">
+      <item name="android:layout_marginEnd">@dimen/margin_4x</item>
+      <item name="android:layout_marginStart">@dimen/margin_4x</item>
+   </style>
+
+   <!--Bottom navigation-->
+   <style name="bottomNavigation">
+      <item name="android:textSize">10sp</item>
+      <item name="android:duplicateParentState">true</item>
+      <item name="android:ellipsize">end</item>
+      <item name="android:maxLines">1</item>
+   </style>
+
+   <style name="toolbarTitleSmall" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+      <item name="android:textSize">@dimen/text_x_normal</item>
+   </style>
+
+   <style name="toolbarSubtitleSmall" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+      <item name="android:textSize">@dimen/text_normal</item>
+   </style>
+
+   <!--Recyclerview-->
+   <style name="recyclerViewStyle">
+      <item name="android:clipToPadding">false</item>
+      <item name="android:splitMotionEvents">false</item>
+      <item name="android:layout_width">match_parent</item>
+      <item name="android:layout_height">match_parent</item>
+   </style>
+
+   <style name="recyclerViewWithPaddingStyle" parent="recyclerViewStyle">
+      <item name="android:paddingTop">@dimen/default_spacing_medium</item>
+      <item name="android:paddingStart">@dimen/default_spacing_medium</item>
+      <item name="android:paddingEnd">@dimen/default_spacing_medium</item>
+      <item name="android:paddingBottom">@dimen/default_spacing_medium</item>
+   </style>
+
+   <!--App Button-->
+   <style name="appButtonPrimaryStyle">
+      <item name="android:layout_width">match_parent</item>
+      <item name="android:layout_height">@dimen/simple_button_height</item>
+      <item name="android:textColor">@android:color/white</item>
+      <item name="android:background">@drawable/bg_fill_primary_small_radius_selector</item>
+   </style>
+
+   <style name="appButtonWhiteStyle">
+      <item name="android:layout_width">match_parent</item>
+      <item name="android:layout_height">@dimen/simple_button_height</item>
+      <item name="android:textColor">@color/colorAccent</item>
+      <item name="android:background">@drawable/bg_fill_white_small_radius_selector</item>
+      <item name="android:layout_marginTop">@dimen/margin_4x</item>
+   </style>
+
+   <!--Text input layout-->
+   <style name="textInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+      <item name="android:layout_width">match_parent</item>
+      <item name="android:layout_height">wrap_content</item>
+      <item name="android:layout_marginTop">@dimen/margin_4x</item>
+      <item name="android:focusableInTouchMode">true</item>
+      <item name="boxStrokeColor">@color/colorAccent</item>
+      <item name="boxStrokeWidth">@dimen/line_height</item>
+      <item name="hintTextColor">@color/colorAccent</item>
+      <item name="boxStrokeWidthFocused">@dimen/line_height</item>
+      <item name="colorControlActivated">@color/colorAccent</item>
+      <item name="boxCornerRadiusTopStart">@dimen/bg_small_radius</item>
+      <item name="boxCornerRadiusTopEnd">@dimen/bg_small_radius</item>
+      <item name="boxCornerRadiusBottomStart">@dimen/bg_small_radius</item>
+      <item name="boxCornerRadiusBottomEnd">@dimen/bg_small_radius</item>
+   </style>
+
+   <style name="TextInputLayoutTheme" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+      <item name="colorControlActivated">@color/colorAccent</item>
+   </style>
+
+   <!--Text input edit text style-->
+   <style name="textInputEditTextStyle">
+      <item name="android:layout_width">match_parent</item>
+      <item name="android:layout_height">wrap_content</item>
+      <item name="android:drawablePadding">@dimen/padding_4x</item>
+      <item name="android:maxLines">1</item>
+   </style>
+
+   <!--Text Normal style-->
+   <style name="generalTextStyle">
+      <item name="android:layout_width">wrap_content</item>
+      <item name="android:layout_height">wrap_content</item>
+      <item name="android:gravity">center_vertical</item>
+      <item name="android:layout_gravity">center_vertical</item>
+   </style>
+
+   <!--Text Normal style with padding-->
+   <style name="generalTextStyle.WithPadding">
+      <item name="android:paddingBottom">@dimen/padding_4x</item>
+      <item name="android:paddingTop">@dimen/padding_4x</item>
+      <item name="android:paddingStart">@dimen/padding_4x</item>
+      <item name="android:paddingEnd">@dimen/padding_4x</item>
+      <item name="android:drawablePadding">@dimen/padding_3x</item>
+   </style>
+
+   <style name="generalTextStyle.WithPadding.BSDialogTitleStyle">
+      <item name="android:textAppearance">@style/TextAppearance.AppCompat.Body1</item>
+      <item name="android:layout_width">match_parent</item>
+      <item name="android:textSize">@dimen/text_medium</item>
+   </style>
+
+   <!--Text clickable-->
+   <style name="generalTextStyle.WithPadding.Clickable">
+      <item name="android:background">?attr/selectableItemBackground</item>
+   </style>
+
+   <style name="BottomSheetDialogSlideDown">
+      <item name="android:windowExitAnimation">@anim/slide_down</item>
+      <item name="android:windowEnterAnimation">@anim/slide_up</item>
+   </style>
+
+   <style name="CollapsedAppBarTitleStyle" parent="android:TextAppearance.Material.Body1">
+      <item name="android:textSize">@dimen/text_x_medium</item>
+      <item name="android:textStyle">normal</item>
+      <item name="android:textColor">@color/colorTextBlack</item>
+   </style>
+
+   <style name="ExpandedAppBarTitleStyle" parent="@android:style/TextAppearance.Medium">
+      <item name="android:textSize">@dimen/text_large</item>
+      <item name="android:textColor">@android:color/transparent</item>
+      <item name="android:textStyle">normal</item>
+   </style>
+
+   <!--Verify countryCode item style-->
+   <style name="VerifyCodeBoxStyle">
+      <item name="android:maxLength">1</item>
+      <item name="android:inputType">number</item>
+      <item name="android:textColor">@color/colorAccent</item>
+      <item name="android:gravity">center</item>
+      <item name="android:textStyle">bold</item>
+      <item name="android:textSize">@dimen/text_x_medium</item>
+      <item name="android:layout_width">50dp</item>
+      <item name="android:layout_height">wrap_content</item>
+      <item name="android:cursorVisible">false</item>
+      <item name="android:layout_margin">@dimen/margin_1x</item>
+      <item name="android:textIsSelectable">true</item>
+      <item name="android:textAppearance">@style/TextAppearance.AppCompat.Body2</item>
+      <item name="android:background">@drawable/bg_verify_code_box</item>
+   </style>
+
+   <style name="FullScreenDialogStyle" parent="Base.Theme.MaterialComponents.Light.Dialog">
+      <item name="android:windowNoTitle">true</item>
+      <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+      <item name="colorPrimary">@color/colorPrimary</item>
+      <item name="colorAccent">@color/colorAccent</item>
+      <item name="android:windowFullscreen">false</item>
+      <item name="android:windowIsFloating">false</item>
+   </style>
+
+   <!--Collapse theme-->
+   <style name="ExpandedAppBarTitleWhite" parent="@android:style/TextAppearance.Medium">
+      <item name="android:textSize">@dimen/text_large</item>
+      <item name="android:textColor">@android:color/white</item>
+      <item name="android:textStyle">normal</item>
+   </style>
+
+   <style name="ExpandedAppBarTitleTransparent" parent="ExpandedAppBarTitleWhite">
+      <item name="android:textSize">@dimen/text_large</item>
+      <item name="android:textColor">@android:color/transparent</item>
+      <item name="android:textStyle">normal</item>
+   </style>
+
+   <!--TabLayout-->
+   <style name="AppTabLayoutStyle" parent="Widget.MaterialComponents.TabLayout">
+      <item name="tabTextColor">@color/bg_text_grey_accent_selector</item>
+      <item name="tabIndicatorColor">@color/colorAccent</item>
+      <item name="tabTextAppearance">@style/TextAppearance.AppCompat.Body2</item>
+      <item name="android:textSize">@dimen/text_medium</item>
+   </style>
+
+   <!--Date Picker Dialog-->
+   <style name="DatePickerTheme" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+      <item name="colorPrimary">@color/colorAccent</item>
+      <item name="colorPrimaryDark">@color/colorAccent</item>
+      <item name="android:windowAnimationStyle">@style/DialogScaleAnimation</item>
+   </style>
+
+</resources>

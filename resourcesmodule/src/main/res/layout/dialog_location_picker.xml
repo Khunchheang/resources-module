@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+   <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:fitsSystemWindows="true"
+      tools:context="com.domrey.resourcesmodule.dialog.locationpicker.LocationPickerDialog">
+
+      <FrameLayout
+         android:id="@+id/rootMap"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent" />
+
+      <androidx.appcompat.widget.Toolbar
+         android:id="@+id/toolbar"
+         android:layout_width="match_parent"
+         android:layout_height="?attr/actionBarSize"
+         android:background="@drawable/bg_toolbar_white_gradient"
+         android:elevation="0dp"
+         android:stateListAnimator="@null"
+         app:layout_constraintTop_toTopOf="parent"
+         app:navigationIcon="@drawable/ic_close_black" />
+
+      <ImageView
+         android:id="@+id/imgMovePlace"
+         android:layout_width="64dp"
+         android:layout_height="64dp"
+         android:src="@drawable/logo_on_map"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintRight_toRightOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+         tools:ignore="ContentDescription" />
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+         android:id="@+id/fabCurrentLocation"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_margin="@dimen/margin_4x"
+         app:backgroundTint="@color/colorWhite"
+         app:layout_constraintBottom_toTopOf="@+id/fabDone"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:srcCompat="@drawable/ic_my_location" />
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+         android:id="@+id/fabDone"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_margin="@dimen/margin_4x"
+         app:backgroundTint="@color/colorWhite"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:srcCompat="@drawable/ic_done" />
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

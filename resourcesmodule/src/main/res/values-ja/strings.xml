@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+   <!--Dialog-->
+   <string name="ok">よし</string>
+   <string name="cancel">キャンセル</string>
+   <string name="retry">リトライ</string>
+   <string name="tab_to_retry">再試行するタブ</string>
+   <string name="yes">はい</string>
+   <string name="no">番号</string>
+
+   <!--Server message-->
+   <!--Session expired-->
+   <string name="session_expired">セッションの有効期限が切れ</string>
+   <string name="pls_log_in_again">もう一度ログインしてください。</string>
+   <!--Server problem-->
+   <string name="cannot_connect">接続できません</string>
+   <string name="pls_try_again">もう一度やり直してください。</string>
+   <!--Timeout-->
+   <string name="connection_timeout">接続タイムアウト</string>
+   <!--No network connection-->
+   <string name="no_network_title">ネットワーク接続なし</string>
+   <string name="pls_check_network">ネットワーク接続を確認してください！</string>
+
+   <!--Loading dialog-->
+   <string name="loading">読み込んでいます…</string>
+
+   <!--No data message-->
+   <string name="no_data">何もデータが見つかりませんでした</string>
+
+   <!--Language dialog-->
+   <string name="languages">言語</string>
+
+   <!--General-->
+   <string name="save">セーブ</string>
+
+   <!--Country code dialog-->
+   <string name="search_country">国または地域を検索</string>
+   <string name="country_or_region">国または地域</string>
+   <string name="country_not_found">国または地域が見つかりません</string>
+
+   <!--Verify Code-->
+   <string name="verify_code">コードを確認する</string>
+   <string name="enter_six_digit_tag">送信された6桁のコードを入力してください：％s</string>
+   <string name="submit">参加する</string>
+   <string name="resend">再送</string>
+   <string name="dont_get_code">コードを取得しませんか？</string>
+   <string name="invalid_code">無効なコード</string>
+   <string name="verify_fail">検証コードが正しくありません!</string>
+   <string name="you_can_resend_in_tag">で再送信できます %s</string>
+   <string name="verify_code_send_success">コードが正常に送信されたことを確認してください!</string>
+
+   <!--Dialog image picker-->
+   <string name="choose_an_action">アクションを選択</string>
+   <string name="camera">カメラ</string>
+   <string name="gallery">ギャラリー</string>
+   <string name="permissions_denied">権限が拒否されました</string>
+
+   <!--Location picker dialog-->
+   <string name="close">閉じる</string>
+   <string name="done">できた</string>
+   <string name="no_location_data_provided">場所データが提供されていません!</string>
+
+   <!--Update version dialog-->
+   <string name="new_update_title">新しいアップデート</string>
+   <string name="new_update_available_msg">利用可能なアップデートの新しいバージョン。 更新してください。</string>
+
+   <!--Gender dialog-->
+   <string name="gender">性別</string>
+   <string name="male">男性</string>
+   <string name="female">女性</string>
+   <string name="unknown">わからない</string>
+
+</resources>

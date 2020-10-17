@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+
+   <!--Dev-->
+   <entity>
+      <key>version_debug</key>
+      <value>1.0.0</value>
+   </entity>
+
+   <entity>
+      <key>is_force_update_debug</key>
+      <value>false</value>
+   </entity>
+
+   <entity>
+      <key>update_url_debug</key>
+      <value>https://play.google.com/store/apps/details?id=com.instagram.android</value>
+   </entity>
+
+   <!--Alpha-->
+   <entity>
+      <key>version_alpha</key>
+      <value>1.0.0</value>
+   </entity>
+
+   <entity>
+      <key>is_force_update_alpha</key>
+      <value>false</value>
+   </entity>
+
+   <entity>
+      <key>update_url_alpha</key>
+      <value>https://play.google.com/store/apps/details?id=com.instagram.android</value>
+   </entity>
+
+
+   <!--Release-->
+   <entity>
+      <key>version</key>
+      <value>1.0.0</value>
+   </entity>
+
+   <entity>
+      <key>is_force_update</key>
+      <value>false</value>
+   </entity>
+
+   <entity>
+      <key>update_url</key>
+      <value>https://play.google.com/store/apps/details?id=com.instagram.android</value>
+   </entity>
+
+</defaultsMap>

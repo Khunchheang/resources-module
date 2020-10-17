@@ -1,0 +1,106 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion build_versions.target_sdk
+    buildToolsVersion build_versions.build_tools
+    defaultConfig {
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            testCoverageEnabled = "true"
+            debuggable = true
+        }
+        release {
+            debuggable false
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    buildFeatures {
+        dataBinding = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    // work-runtime-ktx 2.1.0 and above now requires Java 8
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //Supports
+    implementation deps.kotlin.stdlib
+    implementation deps.support.app_compat
+    implementation deps.support.recyclerview
+    implementation deps.support.design
+    implementation deps.support.v4
+    implementation deps.support.core_ktx
+    implementation deps.support.viewpager2
+    implementation deps.support.activity_ktx
+    implementation deps.support.fragment_ktx
+
+    /*Third Parties*/
+    implementation deps.glide
+    implementation deps.constraint_layout
+    implementation deps.facebook
+    implementation deps.service.auth
+
+    //Google services
+    implementation deps.service.map
+    implementation deps.service.location
+
+    //Room
+    implementation deps.room.runtime
+    implementation deps.room.rxjava2
+    implementation deps.room.room_ktx
+    kapt deps.room.compiler
+
+    //Lifecycle
+    implementation deps.lifecycle.extension
+    implementation deps.lifecycle.viewmodel_ktx
+    implementation deps.lifecycle.runtime
+    implementation deps.lifecycle.livedata_ktx
+    implementation deps.lifecycle.java8
+
+    //Coroutine
+    implementation deps.coroutine.core
+    implementation deps.coroutine.android
+    implementation deps.work.runtime_ktx
+    implementation deps.paging_ktx
+
+    //Dagger
+    implementation deps.dagger.runtime
+    implementation deps.dagger.android
+    implementation deps.dagger.android_support
+    kapt deps.dagger.compiler
+    kapt deps.dagger.android_support_compiler
+
+    //RxJava
+    implementation deps.rxjava
+    implementation deps.rx_android
+
+    //Retrofit
+    implementation deps.retrofit.runtime
+    implementation deps.retrofit.converter_gson
+    implementation deps.okhttp.okhttp3_interceptor
+    implementation deps.okhttp.okhttp3
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+   <data>
+
+      <variable
+         name="message"
+         type="String" />
+
+   </data>
+
+   <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/bg_dialog_radius">
+
+      <ProgressBar
+         android:id="@+id/progressBar"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center"
+         android:layout_marginStart="@dimen/margin_5x"
+         android:layout_marginTop="@dimen/margin_3x"
+         android:layout_marginEnd="@dimen/margin_3x"
+         android:layout_marginBottom="@dimen/margin_3x" />
+
+      <TextView
+         android:id="@+id/tvMsg"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_centerVertical="true"
+         android:layout_marginEnd="@dimen/margin_5x"
+         android:layout_toEndOf="@+id/progressBar"
+         android:text="@{message}" />
+
+   </RelativeLayout>
+
+</layout>

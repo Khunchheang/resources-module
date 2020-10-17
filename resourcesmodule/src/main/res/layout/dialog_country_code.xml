@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+   <data>
+
+      <import type="androidx.lifecycle.LiveData" />
+
+      <import type="java.util.List" />
+
+      <import type="com.domrey.resourcesmodule.data.local.room.CountryCode" />
+
+      <variable
+         name="resource"
+         type="LiveData&lt;List&lt;CountryCode>>" />
+
+   </data>
+
+   <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      android:id="@+id/root"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:minHeight="@dimen/min_height_match_parent"
+      app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+      <com.google.android.material.appbar.AppBarLayout
+         android:id="@+id/appbarLayout"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="@android:color/white"
+         android:elevation="0dp"
+         android:stateListAnimator="@null"
+         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+         app:layout_constraintTop_toTopOf="parent">
+
+         <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="0dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.DayNight.ActionBar"
+            app:title="@string/country_or_region"
+            app:titleTextAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+         <EditText
+            android:id="@+id/edtSearch"
+            style="@style/textInputEditTextStyle"
+            android:layout_marginStart="@dimen/margin_4x"
+            android:layout_marginEnd="@dimen/margin_4x"
+            android:layout_marginBottom="@dimen/margin_2x"
+            android:background="@drawable/bg_outline_grey_small_radius"
+            android:hint="@string/search_country"
+            android:inputType="text"
+            android:padding="@dimen/padding_3x"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="Autofill" />
+
+      </com.google.android.material.appbar.AppBarLayout>
+
+      <androidx.recyclerview.widget.RecyclerView
+         android:id="@+id/rvCountryCode"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:clipToPadding="false"
+         android:paddingBottom="112dp"
+         android:splitMotionEvents="false"
+         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+         app:layout_constraintTop_toBottomOf="@+id/appbarLayout"
+         tools:listitem="@layout/item_country_code" />
+
+      <TextView
+         android:id="@+id/tvNotFound"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="@dimen/margin_4x"
+         android:text="@string/country_not_found"
+         android:textSize="@dimen/text_x_normal"
+         app:layout_constraintLeft_toLeftOf="@+id/rvCountryCode"
+         app:layout_constraintRight_toRightOf="@+id/rvCountryCode"
+         app:layout_constraintTop_toTopOf="@+id/rvCountryCode"
+         app:visibleGone="@{resource.size()==0}" />
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

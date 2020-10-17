@@ -1,0 +1,3 @@
+include ':resourcesmodule'
+include ':app'
+rootProject.name = "resources-module"

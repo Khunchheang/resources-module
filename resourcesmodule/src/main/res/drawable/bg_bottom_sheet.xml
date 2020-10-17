@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--~
+  ~ Copyright (c) SkyBooking Co,. Ltd
+  ~ SkyOwner
+  ~ Created by Khunchheang on  18/1/2020.
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+   android:shape="rectangle">
+   <corners
+      android:topLeftRadius="@dimen/bg_small_radius"
+      android:topRightRadius="@dimen/bg_small_radius" />
+   <padding android:top="@dimen/padding2dp" />
+   <solid android:color="@android:color/white" />
+</shape>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+   <integer name="anim_duration_x_short">100</integer>
+   <integer name="anim_duration_short">180</integer>
+   <integer name="anim_duration_medium">300</integer>
+   <integer name="anim_duration_long">400</integer>
+   <integer name="anim_duration_x_long">500</integer>
+
+   <integer name="slide">200</integer>
+
+</resources>

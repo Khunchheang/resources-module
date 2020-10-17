@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?><!--~
+  ~ Copyright (c) SkyBooking Co,. Ltd
+  ~ SkyOwner
+  ~ Created by Khunchheang on  18/1/2020.
+  -->
+
+<layout>
+
+   <data>
+
+      <variable
+         name="title"
+         type="String" />
+
+      <variable
+         name="message"
+         type="String" />
+
+      <variable
+         name="textBtnPos"
+         type="String" />
+
+      <variable
+         name="textBtnNeg"
+         type="String" />
+
+   </data>
+
+   <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      android:id="@+id/view"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/bg_dialog_radius">
+
+      <TextView
+         android:id="@+id/tvTitle"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="@dimen/margin_4x"
+         android:layout_marginTop="@dimen/margin_4x"
+         android:layout_marginEnd="@dimen/margin_4x"
+         android:text="@{title, default = Dialog}"
+         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+         android:textSize="@dimen/text_medium"
+         app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+         app:visibleGone="@{title!=null}" />
+
+      <TextView
+         android:id="@+id/tvMsg"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="@dimen/margin_4x"
+         android:layout_marginTop="@dimen/margin_4x"
+         android:layout_marginEnd="@dimen/margin_4x"
+         android:layout_marginBottom="@dimen/margin_2x"
+         android:lineSpacingExtra="@dimen/margin_1x"
+         android:text="@{message, default = `Dialog Message`}"
+         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+         android:textSize="@dimen/text_x_normal"
+         app:layout_constraintBottom_toTopOf="@+id/btnNegative"
+         app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintRight_toRightOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+      <TextView
+         android:id="@+id/btnNegative"
+         style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginBottom="@dimen/margin_1x"
+         android:gravity="center"
+         android:text="@{textBtnNeg, default = No}"
+         android:textAllCaps="true"
+         android:visibility="invisible"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintRight_toLeftOf="@+id/btnPositive"
+         app:visibleInvisible="@{textBtnNeg!=null}" />
+
+      <TextView
+         android:id="@+id/btnPositive"
+         style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginEnd="@dimen/margin_2x"
+         android:text="@{textBtnPos, default = Yes}"
+         android:textAllCaps="true"
+         app:layout_constraintBaseline_toBaselineOf="@+id/btnNegative"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintRight_toRightOf="parent" />
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
