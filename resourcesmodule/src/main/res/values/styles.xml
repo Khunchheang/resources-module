@@ -190,6 +190,8 @@
    <style name="generalTextStyle.WithPadding">
       <item name="android:paddingBottom">@dimen/padding_3x</item>
       <item name="android:paddingTop">@dimen/padding_3x</item>
+      <item name="android:paddingStart">@dimen/padding_3x</item>
+      <item name="android:paddingEnd">@dimen/padding_3x</item>
       <item name="android:drawablePadding">@dimen/padding_3x</item>
    </style>
 

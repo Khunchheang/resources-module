@@ -49,7 +49,7 @@
                android:drawableStart="@drawable/img_khmer_flag"
                android:drawableEnd="@drawable/check_selector"
                android:drawablePadding="@dimen/padding_3x"
-               android:padding="@dimen/padding_4x"
+               android:padding="@dimen/padding_3x"
                android:text="@string/khmer"
                android:textSize="@dimen/text_x_normal" />
 
@@ -67,7 +67,7 @@
                android:drawableEnd="@drawable/check_selector"
                android:drawablePadding="@dimen/padding_3x"
                android:gravity="center_vertical"
-               android:padding="@dimen/padding_4x"
+               android:padding="@dimen/padding_3x"
                android:text="@string/english"
                android:textSize="@dimen/text_x_normal" />
 
@@ -85,7 +85,7 @@
                android:drawableEnd="@drawable/check_selector"
                android:drawablePadding="@dimen/padding_3x"
                android:gravity="center_vertical"
-               android:padding="@dimen/padding_4x"
+               android:padding="@dimen/padding_3x"
                android:text="@string/chinese"
                android:textSize="@dimen/text_x_normal" />
 
@@ -103,7 +103,7 @@
                android:drawableEnd="@drawable/check_selector"
                android:drawablePadding="@dimen/padding_3x"
                android:gravity="center_vertical"
-               android:padding="@dimen/padding_4x"
+               android:padding="@dimen/padding_3x"
                android:text="@string/japanese"
                android:textSize="@dimen/text_x_normal" />
 
@@ -121,7 +121,7 @@
                android:drawableEnd="@drawable/check_selector"
                android:drawablePadding="@dimen/padding_3x"
                android:gravity="center_vertical"
-               android:padding="@dimen/padding_4x"
+               android:padding="@dimen/padding_3x"
                android:text="@string/korean"
                android:textSize="@dimen/text_x_normal" />
 
@@ -139,7 +139,7 @@
                android:drawableEnd="@drawable/check_selector"
                android:drawablePadding="@dimen/padding_3x"
                android:gravity="center_vertical"
-               android:padding="@dimen/padding_4x"
+               android:padding="@dimen/padding_3x"
                android:text="@string/indonesian"
                android:textSize="@dimen/text_x_normal" />
 
@@ -157,7 +157,7 @@
                android:drawableEnd="@drawable/check_selector"
                android:drawablePadding="@dimen/padding_3x"
                android:gravity="center_vertical"
-               android:padding="@dimen/padding_4x"
+               android:padding="@dimen/padding_3x"
                android:text="@string/malaysian"
                android:textSize="@dimen/text_x_normal" />
 
