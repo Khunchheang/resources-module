@@ -1,6 +1,5 @@
 package com.domrey.resourcesmodule.di
 
-import androidx.paging.PagedList
 import com.domrey.resourcesmodule.helpers.permission.PermissionsFactory
 import com.domrey.resourcesmodule.util.Constants
 import com.google.android.material.datepicker.CalendarConstraints
@@ -42,15 +41,6 @@ class ResourceModule {
    @Provides
    @Singleton
    fun provideAppPermissionFactory() = PermissionsFactory()
-
-   @Provides
-   @Singleton
-   fun providePageListConfigBuilder() = PagedList.Config.Builder()
-      .setPageSize(10)
-      .setInitialLoadSizeHint(10)
-      .setPrefetchDistance(10)
-      .setEnablePlaceholders(false)
-      .build()
 
    @Provides
    @Named(DOB_CALENDAR_CONSTRAINT_BUILDER)
