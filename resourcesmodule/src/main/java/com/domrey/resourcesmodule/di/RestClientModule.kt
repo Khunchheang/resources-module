@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 //Request Header Params
-const val AUTHORIZATION = "Authorization"
+/*const val AUTHORIZATION = "Authorization"
 const val BEARER = "Bearer"
 const val LOCALIZATION = "X-Localization"
 const val APP_ID = "X-AppId"
@@ -29,12 +29,12 @@ const val PLAYER_ID = "X-PlayerId"
 const val APP_TYPE_VALUE = "Android"
 const val APP_ID_VALUE = "12345678-1234-1234-1234-123456789012"
 const val BASIC_AUTH_USERNAME = "WeTraceCambodia"
-const val BASIC_AUTH_PASSWORD = "WTC8@#2%8998^&\$"
+const val BASIC_AUTH_PASSWORD = "WTC8@#2%8998^&\$"*/
 
 @Module
-class ResourceRestClientModule {
+class RestClientModule {
 
-   @Provides
+   /*@Provides
    @Singleton
    @SuppressLint("HardwareIds")
    fun provideHeaderInterceptor(
@@ -63,7 +63,7 @@ class ResourceRestClientModule {
          }
          return chain.proceed(request.build())
       })
-   }
+   }*/
 
    @Provides
    @Singleton

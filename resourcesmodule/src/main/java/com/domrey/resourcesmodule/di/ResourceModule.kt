@@ -1,13 +1,6 @@
 package com.domrey.resourcesmodule.di
 
-import android.content.Context
-import android.os.Handler
 import androidx.paging.PagedList
-import com.domrey.resourcesmodule.R
-import com.domrey.resourcesmodule.app.AppExecutors
-import com.domrey.resourcesmodule.customview.DividerItemDecoration
-import com.domrey.resourcesmodule.customview.ItemOffsetDecoration
-import com.domrey.resourcesmodule.dialog.countrycode.CountryCodeAdapter
 import com.domrey.resourcesmodule.helpers.permission.PermissionsFactory
 import com.domrey.resourcesmodule.util.Constants
 import com.google.android.material.datepicker.CalendarConstraints
@@ -22,9 +15,6 @@ import javax.inject.Singleton
 
 @Module
 class ResourceModule {
-
-   @Provides
-   fun provideHandler() = Handler()
 
    @Provides
    fun provideCalendar(): Calendar {
@@ -51,17 +41,6 @@ class ResourceModule {
 
    @Provides
    @Singleton
-   fun provideItemOffsetDecorator(context: Context): ItemOffsetDecoration {
-      val space = context.resources.getDimensionPixelOffset(R.dimen.default_spacing_small)
-      return ItemOffsetDecoration(space)
-   }
-
-   @Provides
-   @Singleton
-   fun provideDividerDecorator(context: Context) = DividerItemDecoration(context)
-
-   @Provides
-   @Singleton
    fun provideAppPermissionFactory() = PermissionsFactory()
 
    @Provides
@@ -81,10 +60,6 @@ class ResourceModule {
       dobCalendarConstraints.setValidator(DateValidatorPointBackward.now())
       return dobCalendarConstraints
    }
-
-   @Provides
-   fun provideCountryCodeAdapter(context: Context, appExecutors: AppExecutors) =
-      CountryCodeAdapter(context, appExecutors)
 
    companion object {
       const val DOB_CALENDAR_CONSTRAINT_BUILDER = "dob_calendar_constraint"

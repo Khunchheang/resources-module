@@ -12,8 +12,9 @@ import com.domrey.resourcesmodule.data.local.room.CountryCode
 import com.domrey.resourcesmodule.databinding.ItemCountryCodeBinding
 import com.domrey.resourcesmodule.dialog.LanguageBSDialog
 import com.domrey.resourcesmodule.util.LocaleHelper
+import javax.inject.Inject
 
-class CountryCodeAdapter(private val context: Context, appExecutors: AppExecutors) :
+class CountryCodeAdapter @Inject constructor(private val context: Context, appExecutors: AppExecutors) :
    BaseListAdapter<ItemCountryCodeBinding, CountryCode, CountryCodeAdapter.ViewHolder>(
       appExecutors,
       COUNTRY_CODE_COMPARATOR
