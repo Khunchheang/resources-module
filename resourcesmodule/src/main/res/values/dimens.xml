@@ -85,6 +85,9 @@
    <dimen name="bg_radius">8dp</dimen>
    <dimen name="simple_button_height">45dp</dimen>
 
+   <!--Progressbar-->
+   <dimen name="progressbar_dimen">48dp</dimen>
+
    <!--Elevation-->
    <dimen name="toolbar_elevation">5dp</dimen>
    <dimen name="bg_small_elevation">2dp</dimen>

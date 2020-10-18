@@ -5,78 +5,81 @@
   -->
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-   xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-   <data>
+    <data>
 
-      <import type="com.domrey.resourcesmodule.data.type.Status" />
+        <import type="com.domrey.resourcesmodule.data.type.Status" />
 
-      <variable
-         name="resource"
-         type="com.domrey.resourcesmodule.data.type.Resource" />
+        <variable
+            name="resource"
+            type="com.domrey.resourcesmodule.data.type.Resource" />
 
-      <variable
-         name="callback"
-         type="com.domrey.resourcesmodule.listener.RetryCallback" />
+        <variable
+            name="callback"
+            type="com.domrey.resourcesmodule.listener.RetryCallback" />
 
-      <variable
-         name="itemCount"
-         type="Integer" />
+        <variable
+            name="itemCount"
+            type="Integer" />
 
-   </data>
+    </data>
 
-   <LinearLayout
-      android:id="@+id/rootLoading"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:gravity="center"
-      android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/rootLoading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
 
-      <ProgressBar
-         android:id="@+id/progressBar"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_gravity="center"
-         android:layout_margin="@dimen/margin_2x"
-         app:visibleGone="@{resource.status == Status.LOADING}" />
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="@dimen/progressbar_dimen"
+            android:layout_height="@dimen/progressbar_dimen"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_2x"
+            app:visibleGone="@{resource.status == Status.LOADING}" />
 
-      <TextView
-         android:id="@+id/tvError"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_gravity="center"
-         android:drawableTop="@drawable/ic_cloud_off"
-         android:drawablePadding="@dimen/padding_2x"
-         android:gravity="center"
-         android:text="@string/no_network_title"
-         android:textStyle="bold"
-         app:textRes="@{resource.messageTitle}"
-         app:visibleGone="@{itemCount==1 &amp;&amp; resource.status == Status.ERROR}" />
+        <TextView
+            android:id="@+id/tvError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/ic_cloud_off"
+            android:drawablePadding="@dimen/padding_2x"
+            android:gravity="center"
+            android:text="@string/no_network_title"
+            android:textStyle="bold"
+            app:textRes="@{resource.messageTitle}"
+            app:visibleGone="@{itemCount==1 &amp;&amp; resource.status == Status.ERROR}" />
 
-      <TextView
-         android:id="@+id/tvErrorDes"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_gravity="center"
-         android:layout_marginTop="@dimen/margin_1x"
-         android:gravity="center"
-         android:lineSpacingExtra="2dp"
-         android:text="@string/pls_check_network"
-         android:textSize="@dimen/text_normal"
-         app:textRes="@{resource.messageDes}"
-         app:visibleGone="@{itemCount==1 &amp;&amp; resource.status == Status.ERROR}" />
+        <TextView
+            android:id="@+id/tvErrorDes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_1x"
+            android:gravity="center"
+            android:lineSpacingExtra="2dp"
+            android:text="@string/pls_check_network"
+            android:textSize="@dimen/text_normal"
+            app:textRes="@{resource.messageDes}"
+            app:visibleGone="@{itemCount==1 &amp;&amp; resource.status == Status.ERROR}" />
 
-      <androidx.appcompat.widget.AppCompatButton
-         android:id="@+id/btnRetry"
-         style="@style/appButtonPrimaryStyle"
-         android:layout_width="wrap_content"
-         android:layout_gravity="center"
-         android:layout_margin="@dimen/margin_2x"
-         android:onClick="@{() -> callback.retry()}"
-         android:text="@string/retry"
-         android:textAllCaps="true"
-         app:visibleGone="@{resource.status == Status.ERROR}" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRetry"
+            style="@style/appButtonPrimaryStyle"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_2x"
+            android:gravity="center"
+            android:onClick="@{() -> callback.retry()}"
+            android:paddingStart="@dimen/padding_6x"
+            android:paddingEnd="@dimen/padding_6x"
+            android:text="@string/retry"
+            android:textAllCaps="true"
+            app:visibleGone="@{resource.status == Status.ERROR}" />
 
-   </LinearLayout>
+    </LinearLayout>
 
 </layout>
