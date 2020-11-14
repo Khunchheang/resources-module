@@ -3,11 +3,13 @@ package com.domrey.resourcesmodule.util
 import android.content.Context
 import android.location.Address
 import android.location.Geocoder
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
 import com.google.android.gms.maps.model.LatLng
 import java.io.IOException
 import java.util.*
 
-object AddressUtil {
+object Common {
 
    fun getCompleteAddressString(context: Context, latLng: LatLng?): String? {
       latLng ?: return null
@@ -54,6 +56,13 @@ object AddressUtil {
          //do something
          null
       }
+   }
+
+   @Suppress("DEPRECATION")
+   fun isNetworkAvailable(context: Context): Boolean {
+      val cm = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+      val activeNetwork: NetworkInfo? = cm.activeNetworkInfo
+      return activeNetwork?.isConnected == true
    }
 
 }

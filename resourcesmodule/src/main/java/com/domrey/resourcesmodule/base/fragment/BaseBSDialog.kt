@@ -15,6 +15,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import com.domrey.resourcesmodule.R
 import com.domrey.resourcesmodule.app.ViewModelFactory
+import com.domrey.resourcesmodule.dialog.PosNegDialog
+import com.domrey.resourcesmodule.dialog.PosNegSingletonDialog
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
@@ -30,8 +32,8 @@ open class BaseBSDialog<B : ViewDataBinding>(@LayoutRes val contentLayoutId: Int
    }
    private var dismissListener: (() -> Unit)? = null
 
-   @Inject
-   lateinit var factory: ViewModelFactory
+   fun onDismissListener(dismissListener: () -> Unit) =
+      apply { this.dismissListener = dismissListener }
 
    override fun getTheme() = R.style.BottomSheetDialog
 
@@ -89,6 +91,14 @@ open class BaseBSDialog<B : ViewDataBinding>(@LayoutRes val contentLayoutId: Int
 
    open fun onBottomSheetSlide(bottomSheet: View, slideOffset: Float) {}
 
+   fun showDialogMessage(): PosNegDialog.Builder {
+      return PosNegDialog.Builder(childFragmentManager)
+   }
+
+   fun showDialogMessageSingleton(): PosNegSingletonDialog.Builder {
+      return PosNegSingletonDialog.Builder(childFragmentManager)
+   }
+
    fun showToast(msg: String) {
       Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
    }
@@ -96,7 +106,4 @@ open class BaseBSDialog<B : ViewDataBinding>(@LayoutRes val contentLayoutId: Int
    fun showToast(msg: Int) {
       showToast(getString(msg))
    }
-
-   fun onDismissListener(dismissListener: () -> Unit) =
-      apply { this.dismissListener = dismissListener }
 }

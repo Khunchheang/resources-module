@@ -10,8 +10,8 @@ import com.domrey.resourcesmodule.dialog.LoadingDialog
 import dagger.android.support.AndroidSupportInjection
 import javax.inject.Inject
 
-open class BaseInjectBSDialog<B : ViewDataBinding>(@LayoutRes val layoutId: Int) :
-   BaseBSDialog<B>(layoutId) {
+open class BaseInjectDialogFragment<T : ViewDataBinding>(@LayoutRes val layoutId: Int) :
+   BaseDialogFragment<T>(layoutId) {
 
    var loadingDialog: LoadingDialog? = null
 
@@ -48,5 +48,4 @@ open class BaseInjectBSDialog<B : ViewDataBinding>(@LayoutRes val layoutId: Int)
          .setTextBtnPos(getString(R.string.ok))
          .show()
    }
-
 }

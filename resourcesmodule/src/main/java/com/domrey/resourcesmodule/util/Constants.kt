@@ -10,12 +10,12 @@ object Constants {
    const val HOUR_MIN_FORMAT = "hh:mm aa"
    const val WEEK_DAY_MONTH_YEAR_HOUR_MIN_FORMAT = "E, d MMM yyyy hh:mm aa"
    const val MONTH_DAY_FORMAT = "MMM dd"
-   /*const val YEAR_MONTH_NO_DASH_FORMAT = "yyyyMMdd"
+   const val YEAR_MONTH_NO_DASH_FORMAT = "yyyyMMdd"
    const val MONTH_DAY_ONLY_FORMAT = "MMM d"
    const val MONTH_DAY_YEAR_HOUR_FORMAT = "mm dd, yyyy HH:mm"
    const val TIME_YEAR_MONTH_DIS_FORMAT = "HH:mm - E, MMM d"
    const val TIME_YEAR_MONTH_PARSE_FORMAT = "yyyy-MM-dd HH:mm:ss"
-   const val TIME_YEAR_MONTH_T_PARSE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss"*/
+   const val TIME_YEAR_MONTH_T_PARSE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss"
 
    /*Delay bottom sheet dialog dismiss*/
    const val SORT_DELAY_BOTTOM_DISMISS = 150L

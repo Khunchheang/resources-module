@@ -7,18 +7,31 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
+import android.widget.Toast
 import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.DialogFragment
 import com.domrey.resourcesmodule.R
+import com.domrey.resourcesmodule.data.type.Resource
+import com.domrey.resourcesmodule.dialog.LoadingDialog
+import com.domrey.resourcesmodule.dialog.PosNegDialog
+import com.domrey.resourcesmodule.dialog.PosNegSingletonDialog
 
 open class BaseDialogFragment<T : ViewDataBinding>(@LayoutRes val contentLayoutId: Int) :
-   BaseBasicDialogFragment() {
+   DialogFragment() {
 
    lateinit var binding: T
    private var inflatedView: View? = null
    private var dismissListener: (() -> Unit)? = null
+
+   fun onDismissListener(dismissListener: () -> Unit) =
+      apply { this.dismissListener = dismissListener }
+
+   override fun onCreate(savedInstanceState: Bundle?) {
+      super.onCreate(savedInstanceState)
+      setStyle(STYLE_NO_TITLE, R.style.AppTheme_DialogStyle)
+   }
 
    override fun onCreateView(
       inflater: LayoutInflater,
@@ -44,13 +57,6 @@ open class BaseDialogFragment<T : ViewDataBinding>(@LayoutRes val contentLayoutI
       binding.lifecycleOwner = viewLifecycleOwner
    }
 
-   override fun show(manager: FragmentManager, tag: String?) {
-      manager.executePendingTransactions()
-      val fragmentTransaction = manager.beginTransaction()
-      if (!this.isAdded) fragmentTransaction.add(this, this.tag)
-      fragmentTransaction.commitAllowingStateLoss()
-   }
-
    override fun dismiss() {
       this.dismissAllowingStateLoss()
       super.dismiss()
@@ -60,5 +66,21 @@ open class BaseDialogFragment<T : ViewDataBinding>(@LayoutRes val contentLayoutI
       dismissListener?.invoke()
       dismissListener = null
       super.onDismiss(dialog)
+   }
+
+   fun showDialogMessage(): PosNegDialog.Builder {
+      return PosNegDialog.Builder(childFragmentManager)
+   }
+
+   fun showDialogMessageSingleton(): PosNegSingletonDialog.Builder {
+      return PosNegSingletonDialog.Builder(childFragmentManager)
+   }
+
+   fun showToast(msg: String) {
+      Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
+   }
+
+   fun showToast(msg: Int) {
+      showToast(getString(msg))
    }
 }

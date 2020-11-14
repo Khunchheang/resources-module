@@ -10,7 +10,6 @@ import com.domrey.resourcesmodule.app.AppExecutors
 import com.domrey.resourcesmodule.base.adapter.BaseListAdapter
 import com.domrey.resourcesmodule.data.local.room.CountryCode
 import com.domrey.resourcesmodule.databinding.ItemCountryCodeBinding
-import com.domrey.resourcesmodule.dialog.LanguageBSDialog
 import com.domrey.resourcesmodule.util.LocaleHelper
 import javax.inject.Inject
 
@@ -45,6 +44,13 @@ class CountryCodeAdapter @Inject constructor(private val context: Context, appEx
    }
 
    companion object {
+      const val KHMER = "km"
+      const val ENGLISH = "en"
+      const val CHINESE = "zh"
+      const val JAPANESE = "ja"
+      const val KOREAN = "ko"
+      const val INDONESIAN = "in"
+      const val MALAYSIAN = "ms"
 
       private val COUNTRY_CODE_COMPARATOR = object : DiffUtil.ItemCallback<CountryCode>() {
          override fun areItemsTheSame(oldItem: CountryCode, newItem: CountryCode): Boolean {
@@ -59,13 +65,13 @@ class CountryCodeAdapter @Inject constructor(private val context: Context, appEx
 
       fun getCountryNameByLocale(context: Context, countryCode: CountryCode?): String? {
          return when (LocaleHelper.getLanguage(context)) {
-            LanguageBSDialog.KHMER -> countryCode?.khmer
-            LanguageBSDialog.ENGLISH -> countryCode?.english
-            LanguageBSDialog.CHINESE -> countryCode?.chinese
-            LanguageBSDialog.JAPANESE -> countryCode?.japanese
-            LanguageBSDialog.KOREAN -> countryCode?.korean
-            LanguageBSDialog.INDONESIAN -> countryCode?.indonesian
-            LanguageBSDialog.MALAYSIAN -> countryCode?.malaysian
+            KHMER -> countryCode?.khmer
+            ENGLISH -> countryCode?.english
+            CHINESE -> countryCode?.chinese
+            JAPANESE -> countryCode?.japanese
+            KOREAN -> countryCode?.korean
+            INDONESIAN -> countryCode?.indonesian
+            MALAYSIAN -> countryCode?.malaysian
             else -> countryCode?.english
          }
       }

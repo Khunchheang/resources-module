@@ -25,30 +25,10 @@
    <!--Loading dialog-->
    <string name="loading">불러오는 중…</string>
 
-   <!--No data message-->
-   <string name="no_data">데이터가 없습니다</string>
-
-   <!--Language dialog-->
-   <string name="languages">언어</string>
-
-   <!--General-->
-   <string name="save">저장</string>
-
    <!--Country code dialog-->
    <string name="search_country">국가 또는 지역 검색</string>
    <string name="country_or_region">국가 혹은 지역</string>
    <string name="country_not_found">국가 또는 지역을 찾을 수 없음</string>
-
-   <!--Verify Code-->
-   <string name="verify_code">코드 확인</string>
-   <string name="enter_six_digit_tag">전송 된 6 자리 코드를 입력하십시오: %s</string>
-   <string name="submit">제출</string>
-   <string name="resend">재발송</string>
-   <string name="dont_get_code">코드를받지 않습니까?</string>
-   <string name="invalid_code">유효하지 않은 코드</string>
-   <string name="verify_fail">코드가 잘못되었습니다!</string>
-   <string name="you_can_resend_in_tag">로 다시 보낼 수 있습니다 %s</string>
-   <string name="verify_code_send_success">코드가 성공적으로 전송되었는지 확인하십시오!</string>
 
    <!--Dialog image picker-->
    <string name="choose_an_action">행동을 선택하십시오</string>
@@ -64,11 +44,5 @@
    <!--Update version dialog-->
    <string name="new_update_title">새로운 업데이트</string>
    <string name="new_update_available_msg">업데이트 가능한 새 버전. 업데이트로 이동하십시오.</string>
-
-   <!--Gender dialog-->
-   <string name="gender">성별</string>
-   <string name="male">남성</string>
-   <string name="female">여자</string>
-   <string name="unknown">알 수 없는</string>
 
 </resources>

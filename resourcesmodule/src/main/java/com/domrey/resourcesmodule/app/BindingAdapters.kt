@@ -30,21 +30,12 @@ object BindingAdapters {
 
    @JvmStatic
    @BindingAdapter("textRes")
-   fun setTextResource(textView: TextView, messageRes: Int?) {
+   fun setTextResource(textView: TextView, msg: Any?) {
       try {
-         messageRes?.let {
-            textView.text = textView.context.getString(it)
-         }
+         if (msg is Int) textView.text = textView.context.getString(msg)
+         else textView.text = msg.toString()
       } catch (ex: Exception) {
          ex.localizedMessage
-      }
-   }
-
-   @JvmStatic
-   @BindingAdapter("textIntValue")
-   fun setTextIntValue(textView: TextView, value: Int?) {
-      value?.let {
-         textView.text = value.toString()
       }
    }
 

@@ -25,30 +25,10 @@
    <!--Loading dialog-->
    <string name="loading">Memuat…</string>
 
-   <!--No data message-->
-   <string name="no_data">Tiada data dijumpai</string>
-
-   <!--Language dialog-->
-   <string name="languages">Bahasa</string>
-
-   <!--General-->
-   <string name="save">Simpan</string>
-
    <!--Country code dialog-->
    <string name="search_country">Cari negara atau wilayah</string>
    <string name="country_or_region">Negara atau wilayah</string>
    <string name="country_not_found">Negara atau wilayah tidak dijumpai</string>
-
-   <!--Verify Code-->
-   <string name="verify_code">Sahkan kod</string>
-   <string name="enter_six_digit_tag">Masukkan kod 6 digit yang dihantar ke: %s</string>
-   <string name="submit">Hantar</string>
-   <string name="resend">Hantar semula</string>
-   <string name="dont_get_code">Tidak mendapat kod?</string>
-   <string name="invalid_code">Kod tidak sah</string>
-   <string name="verify_fail">Kod pengesahan salah!</string>
-   <string name="you_can_resend_in_tag">Anda boleh menghantar semula dalam %s</string>
-   <string name="verify_code_send_success">Sahkan kod berjaya dihantar!</string>
 
    <!--Dialog image picker-->
    <string name="choose_an_action">Pilih Tindakan</string>
@@ -64,11 +44,5 @@
    <!--Update version dialog-->
    <string name="new_update_title">Kemaskini terbaru</string>
    <string name="new_update_available_msg">Versi baru untuk kemas kini tersedia. Sila pergi untuk mengemas kini.</string>
-
-   <!--Gender dialog-->
-   <string name="gender">Jantina</string>
-   <string name="male">Lelaki</string>
-   <string name="female">Perempuan</string>
-   <string name="unknown">Tidak diketahui</string>
 
 </resources>
