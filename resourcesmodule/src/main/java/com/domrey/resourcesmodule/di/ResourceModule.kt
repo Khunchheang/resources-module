@@ -1,13 +1,10 @@
 package com.domrey.resourcesmodule.di
 
 import com.domrey.resourcesmodule.helpers.permission.PermissionsFactory
-import com.domrey.resourcesmodule.util.Constants
 import com.google.android.material.datepicker.CalendarConstraints
 import com.google.android.material.datepicker.DateValidatorPointBackward
 import dagger.Module
 import dagger.Provides
-import java.text.DecimalFormat
-import java.text.SimpleDateFormat
 import java.util.*
 import javax.inject.Named
 import javax.inject.Singleton
@@ -23,20 +20,6 @@ class ResourceModule {
       val year = calendar.get(Calendar.YEAR)
       return GregorianCalendar(year, month, dayOfMonth, 0, 0)
    }
-
-   @Provides
-   @Named(Constants.YEAR_MONTH_DAY_FORMAT)
-   fun provideYearMonthDayFormat() =
-      SimpleDateFormat(Constants.YEAR_MONTH_DAY_FORMAT, Locale.getDefault())
-
-   @Provides
-   @Named(Constants.MONTH_DAY_FORMAT)
-   fun provideMonthDayFormat() =
-      SimpleDateFormat(Constants.MONTH_DAY_FORMAT, Locale.getDefault())
-
-   @Provides
-   @Singleton
-   fun provideDecimalFormat() = DecimalFormat(Constants.DECIMAL_FORMAT)
 
    @Provides
    @Singleton
